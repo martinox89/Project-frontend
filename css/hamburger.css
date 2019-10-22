@@ -1,0 +1,69 @@
+.hamburger {
+  display: none;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  margin: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+@media screen and (max-width:765px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  a:hover {
+    color: yellow;
+    font-size: 1em;
+  }
+
+
+
+  .menu-nav {
+    position: fixed;
+    height: 100vh;
+    top: -8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    background-color: black;
+    opacity: 0.8;
+  }
+
+  .menu-nav li {
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 99;
+  }
+
+  .expanded {
+    transform: translateX(0%);
+  }
+
+  /*TRANSITIONS***********/
+  .top-animate {
+    transform: rotate(-45deg)translate(-17px, 6px);
+  }
+
+  .middle-animate {
+    opacity: 0;
+  }
+
+  .bottom-animate {
+    transform: rotate(45deg)translate(-5px, 6px);
+  }
+
+  figure img {
+    z-index: 1;
+  }
