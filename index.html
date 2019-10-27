@@ -2,172 +2,209 @@
 <html lang="nl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendapagina</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/hamburger.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendapagina</title>
+  <link rel="shortcut icon" href="https://downtherabbithole.nl/favicon/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hamburger.css">
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <figure class="logo">
-                <a href="https://downtherabbithole.nl/"><img src="https://downtherabbithole.nl/img/logo_white.png" alt="logo"></a>
+  <header>
+    <nav>
+      <figure class="logo">
+        <a href="https://downtherabbithole.nl/"><img src="https://downtherabbithole.nl/img/logo_white.png" alt="logo"></a>
 
-            </figure>
+      </figure>
 
-            <ul class="menu-nav">
+      <ul class="menu-nav">
 
-                <li><a href="#">agenda</a></li>
-                <li><a href="#">artiesten</a></li>
-                <li><a href="#">info</a></li>
-                <li><a href="#">Faq</a></li>
-            </ul>
+        <li><a href="index.html">agenda</a></li>
+        <li><a href="artiest.html">artiesten</a></li>
+        <li><a href="#">info</a></li>
+        <li><a href="#">Faq</a></li>
+      </ul>
 
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+      <input type="text" placeholder="zoek hier verder" value="zoeken">
 
-        <video autoplay muted loop id="concert">
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+
+
+    </nav>
+
+    <video autoplay muted loop id="concert">
       <source src="content/clipje.mp4">
 
     </video>
 
 
-        <h1>Marsmellow</h1>
-        <h3>Zaterdag 25 mei</h3>
-    </header>
+    <h1>Marsmellow</h1>
+    <h3>Zaterdag 25 mei</h3>
+  </header>
 
-    <main>
-        <aside>
-            <button>Filter</button>
-            <form>
-                <fieldset>
-                    Invullen maar
-                </fieldset>
-            </form>
-        </aside>
+  <main>
+    <aside>
+      <button>Filter</button>
+      <form>
+        <fieldset>
+          <legend>Filter op</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="populairste" value="populairste">
+              <label for="populairste">populairste</label>
+            </li>
 
-        <div class="wrapper">
-            <section>
-                <h2>Aankomende Artiesten</h2>
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25 and 26 November</time>
-                    </footer>
-                </article>
+            <li>
+              <input type="checkbox" name="nieuw" value="nieuw">
+              <label for="nieuw">Nieuw</label>
+            </li>
+            <li>
+              <input type="checkbox" name="locatie" value="locatie">
+              <label for="locatie">locatie</label>
+            </li>
 
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25 and 26 November</time>
-                    </footer>
-                </article>
+            <li>
+              <input type="checkbox" name="prijs" value="prijs">
+              <label for="prijs">Prijs</label>
+            </li>
+          </ul>
+          <input type="submit" name="uitvoeren" value="uitvoeren">
+        </fieldset>
 
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25&26 November</time>
-                    </footer>
-                </article>
-
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25&26 November</time>
-                    </footer>
-                </article>
-            </section>
-        </div>
-
-        <button>Laad meer artiesten</button>
-        <!--tweede container om meer content in te laden -->
-        <div class="wrapper">
-            <section>
-                <h2>Nog meer artiesten</h2>
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25&26 November</time>
-                    </footer>
-                </article>
-
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25&26 November</time>
-                    </footer>
-                </article>
-
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25&26 November</time>
-                    </footer>
-                </article>
-
-                <article>
-                    <header>
-                        <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-                    </header>
-                    <footer>
-                        <h3>Justin Bieber</h3>
-                        <time>25&26 November</time>
-                    </footer>
-                </article>
-            </section>
-        </div>
+        <fieldset>
+          <legend>Tags</legend>
+          <ul class="tags">
+            <li><a href="artiest.html">Justin Bieber</a></li>
+            <li><a href="artiest.html">Downtherabbithole</a></li>
+            <li><a href="artiest.html">Artiest met smaak</a></li>
+            <li><a class="wow" href="#">Niet drukken</a></li>
+          </ul>
+        </fieldset>
 
 
+      </form>
+    </aside>
+
+    <div class="wrapper">
+      <section>
+        <h2>Aankomende Artiesten</h2>
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25 and 26 November</time>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25 and 26 November</time>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25&26 November</time>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25&26 November</time>
+          </footer>
+        </article>
+      </section>
+    </div>
+
+    <button id="knop">Laad meer artiesten</button>
+    <!--tweede container om meer content in te laden -->
+    <div class="wrapper">
+      <section id="hide">
+        <h2>Nog meer artiesten</h2>
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25&26 November</time>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25&26 November</time>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25&26 November</time>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+          </header>
+          <footer>
+            <h3>Justin Bieber</h3>
+            <time>25&26 November</time>
+          </footer>
+        </article>
+      </section>
+    </div>
+
+    <section class="event">
+      <h2>Video van het evenement</h2>
+      <iframe src="https://www.youtube.com/embed/XNsfxvRWgdo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
+  </main>
 
 
+  <footer>
+    <ul>
+      <li><a href="https://downtherabbithole.nl/"><img src="https://downtherabbithole.nl/img/logo_white.png" alt="logo"></a></li>
+      <li>Facebook</li>
+      <li>instragram</li>
+      <li>Martijnsleven.nl</li>
+      <li>Youtube</li>
+    </ul>
+    <small>&copy; Copyright Martijn Smit 2019</small>
+  </footer>
 
-
-
-    </main>
-
-
-    <footer>
-        <ul>
-            <li>Hallo</li>
-            <li>Ik ben</li>
-            <li>doei</li>
-            <li>Doei doei</li>
-
-
-        </ul>
-
-    </footer>
-
-    <script src="js/mobile.js"></script>
-    <script src="js/filter.js"></script>
+  <script src="js/mobile.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 
 </html>

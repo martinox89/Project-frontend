@@ -5,14 +5,22 @@
     padding: 0;
     box-sizing: border-box;
     color: #fff;
+    outline: none;
 }
 
-html,
+
 body {
     width: 100%;
-    height: 100vh;
+
     font-family: "Helvetica";
+    background: url(http://img11.deviantart.net/39ef/i/2007/275/1/6/purple_cloud_texture_1_by_osorrisstock.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 1s ease-in;
 }
+
+
 
 a,
 li {
@@ -29,7 +37,7 @@ h1 {
 
 /*HEADER**************/
 
-header:first-of-type {
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,14 +45,15 @@ header:first-of-type {
     width: 100%;
     position: relative;
     color: #000;
-
     overflow: hidden;
     height: 20em;
     z-index: 0;
 }
 
+
 video {
   width: 100%;
+  ;
 }
 
 nav {
@@ -60,7 +69,7 @@ nav {
 }
 
 .logo {
-    margin: 2rem 0 0 -5rem;
+    margin: 2rem 0 0 0rem;
     z-index: 1;
 }
 
@@ -71,12 +80,18 @@ img {
 
 nav a {
     color: #fff;
+    transition: 1s;
 }
 
-nav a:hover {
-    font-size: 2em;
-    transition: 0.5s ease-in;
+nav:hover {
+  color: yellow;
 }
+
+nav a:focus {
+  text-decoration: underline;
+}
+
+
 
 .menu-nav {
     display: flex;
@@ -84,12 +99,34 @@ nav a:hover {
     width: 50%;
 }
 
+input[type="text"] {
+  display: inline-block;
+  color:#000;
+  padding: 1em 0em 1em 4em;
+  background-image: url(../content/zoeken.svg);
+  background-size: 2em;
+  font-size: 1em;
+  background-repeat: no-repeat;
+  background-position: 1em;
+  border-radius: 5em;
+  border:none;
+  width: 1em;
+  transition: 1s;
+  margin-left: 0em;
+
+}
+
+input[type="text"]:focus {
+  width: 12em;
+}
+
+
 header:first-of-type h1 {
     position: relative;
 }
 
 header:first-of-type h3 {
-    margin-bottom: 9em;
+    margin-bottom: 5em;
     position: relative;
 }
 
@@ -102,18 +139,19 @@ video {
 }
 
 
+
+
 /* Main stuff */
 
 main {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: url(http://img11.deviantart.net/39ef/i/2007/275/1/6/purple_cloud_texture_1_by_osorrisstock.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding-bottom: 5em;
-    z-index: 99;
+    
 }
 
 aside {
@@ -121,6 +159,7 @@ aside {
     flex-direction: column;
     width: 95%;
     margin: auto;
+
 }
 
 button {
@@ -134,28 +173,79 @@ button {
     border: none;
     font-weight: 800;
     width: 100%;
+    transition: 1s;
+    z-index: 99;
 }
 
 form {
     display: none;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
-    height: 30em;
+    height: auto;
+    z-index: 1;
+
+
 }
 
-.show {
-    background-color: blue;
+form.show {
     display: flex;
     flex-direction: column;
-    transition: 1s;
-    z-index: 1
+
+    font-size: 1em;
+
+    z-index: 1;
+
 }
+
+form> fieldset {
+  margin-bottom: 2em;
+}
+
+legend {
+  text-align: center;
+}
+
+fieldset  ul > li {
+  margin-left: 1em;
+}
+
+form input[type="submit"] {
+  margin-left: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 10em;
+  padding: 1em;
+  background-color: #000;
+  border:none;
+}
+
+
+
+.tags a {
+  display: flex;
+  justify-content: space-around;
+  background-color: grey;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  width: 95%;
+
+}
+
+
+
+
+
+
 
 div.wrapper {
     width: 90%;
     margin: auto;
     margin-top: 2em;
+
 }
+
+
 
 section {
     display: flex;
@@ -166,47 +256,52 @@ section {
 section h2 {
     font-size: 2em;
     position: relative;
+    z-index: 0;
 }
 
 article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /background-color: coral;
-    height: 20em;
+    position: relative;
     transition: 2s;
-    margin-top: 2em;
-    box-shadow: 0.8em 0.2em 0.2em grey;
+    height: auto;
+    box-shadow: 0.2em 0.2em 0.2em grey;
+    margin-top: 5em;
+}
+
+article header {
+  height: auto;
+  z-index: 0;
 }
 
 article footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 2em;
-    background-color: #000;
+    background: none;
     width: 100%;
+    position: absolute;
+    left:0;
+    bottom: 2em;
+    z-index: 99
+
+
 }
 
 article:hover {
     transform: scale(1.04);
 }
 
-article:nth-of-type(2) {
-    background-color: black;
-    color: white;
-}
 
-article:nth-of-type(3) {
-    background-color: blue;
-    color: white;
-    margin-top: 2em;
-}
+
+
 
 article img {
     display: flex;
     width: 100%;
-    height: 20em;
+    position: relative;
 }
 
 div:last-of-type h2 {
@@ -217,7 +312,6 @@ div:last-of-type h2 {
 main > button {
   background-color: red;
   background-image: none;
-
     justify-content: space-around;
     width: 20em;
     margin: auto;
@@ -232,16 +326,41 @@ main > button:hover {
 }
 
 
+
+
+
+main> section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section iframe {
+  width: 100%;
+  margin-top: 2em;
+  height: 20em;
+
+
+
+
+}
+
+
 /* footer stuff */
 
-body>footer {
-    background-color: #ccc;
+body> footer {
+    background-color: #000;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 10em;
+    height: auto;
+    padding-bottom: 2em;
+    padding-top: 2em;
 }
 
 footer li {
@@ -251,44 +370,223 @@ footer li {
     align-items: center;
 }
 
+li img {
+  margin-left: 2em;
+}
+
+.raar {
+  transform: rotate(123deg);
+
+}
+
+
+
+/*artiest pagina layout */
+header.artiesten {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+ .artiesten h1  {
+  margin-top:5em;
+  margin-left: 1em;
+
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: -3em;
+}
+
+.container h3 {
+  display: none;
+}
+
+.container aside {
+  width: 100%;
+  margin-top: 2em;
+  padding: 2em;
+  border: solid white 0.1em;
+
+}
+
+article.info {
+  box-shadow: none;
+}
+
+
+
+article.info footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0;
+  left: 0;
+  bottom: 0;
+  padding-top: 2em;
+}
+
+.container article:hover {
+  transition: none;
+  transform: none;
+
+}
+
 @media screen and (min-width:48em) {
-    header:first-of-type {
-        height: 34em;
-    }
-    h1:first-of-type {
-        font-size: 4em;
-    }
-    header:first-of-type h3 {
-        font-size: 2em;
-    }
+
+  a:hover {
+    color: yellow;
+  }
+
+.tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  margin: auto;
+
+}
+
+
+
     section {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    article img {
-        height: 20em;
-    }
+
     article {
-        margin: 1em;
-        margin-top: 4em;
-        height: 20em;
+
+      margin-right: 1em;
     }
+
+
     section h2 {
         position: absolute;
         top: 20;
         left: 8em right:2em;
     }
+
+    main> button {
+      margin-top: 2em;
+    }
+
+    section.event {
+      position: relative;
+    }
+
+    section.event h2 {
+      position: absolute;
+      left:0;
+    }
+
+
+
+
+
+    section iframe {
+      padding-top: 2em;
+      height: 30em;
+
+
+
+    }
+
+
+
+    /* artiesten tablet layout */
+
+    header.artiesten {
+      height: 20em;
+    }
+
+    header.artiesten h1 {
+      margin-top:5em;
+    }
+
+    .container section {
+      max-width: 70%;
+      margin: auto;
+
 }
 
+footer>ul {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
 @media screen and (min-width:68em) {
-  header:first-of-type {
+  header {
     height: 45em
   }
+
+  section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  header.artiesten {
+    height: 30em;
+  }
+
+  header.artiesten h1 {
+    margin-top: 10em;
+  }
+
+  .tags {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+
+
+
+
+
+  .container section {
+    max-width: 60%;
+  }
+
+  main> button {
+    margin-top: -10em;
+  }
+
+  main > section {
+    margin-top: -12em;
+  }
+
+
+
+  section iframe {
+    height: 40em;
+  }
+
 }
 
 @media screen and (min-width:90em) {
-  header:first-of-type {
+  header {
     height: 100vh
+  }
+
+  main > section {
+    margin-top: -15em;
+  }
+
+  main > button {
+    margin-top: -15em;
+  }
+
+  section iframe {
+    height: 50em;
   }
 }

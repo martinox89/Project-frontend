@@ -2,30 +2,38 @@
   display: none;
 }
 
-.hamburger div {
-  width: 30px;
-  height: 3px;
-  margin: 5px;
-  background-color: #fff;
-  transition: all 0.3s ease;
-  z-index: 99;
-}
 
-@media screen and (max-width:765px) {
+
+@media screen and (max-width:45em) {
   body {
     overflow-x: hidden;
   }
 
-  a:hover {
-    color: yellow;
+
+  a:focus {
+
     font-size: 1em;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+
+  input[type="text"] {
+  margin-left: 8em;  
+
   }
 
 
 
   .menu-nav {
     position: fixed;
-    height: 100vh;
+    height: 108vh;
     top: -8vh;
     width: 100%;
     display: flex;
@@ -36,6 +44,7 @@
     transition: transform 0.5s ease-in;
     background-color: black;
     opacity: 0.8;
+    z-index: 99;
   }
 
   .menu-nav li {
