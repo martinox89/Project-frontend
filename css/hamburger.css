@@ -1,35 +1,39 @@
+/* Bron van hulp
+
+Developer Ed. (2018, 29 augustus). Responsive Navigation Bar Tutorial | HTML CSS JAVASCRIPT.
+Geraadpleegd op 30 oktober 2019, van https://www.youtube.com/watch?v=gXkqy0b4M5g
+
+*/
 .hamburger {
   display: none;
 }
-
-
 
 @media screen and (max-width:45em) {
   body {
     overflow-x: hidden;
   }
 
-
   a:focus {
-
     font-size: 1em;
   }
 
   .hamburger div {
-    width: 30px;
-    height: 3px;
-    margin: 5px;
+    width: 2em;
+    height: 0.20em;
+    margin: 0.30em;
     background-color: #fff;
     transition: all 0.3s ease;
-    z-index: 99;
+    z-index: 100;
   }
 
   input[type="text"] {
-  margin-left: 8em;  
-
+    margin-left: 8em;
   }
 
-
+  /* voor screen readers om te begrijpen wat de input is */
+  header label {
+    display: none;
+  }
 
   .menu-nav {
     position: fixed;
@@ -44,7 +48,7 @@
     transition: transform 0.5s ease-in;
     background-color: black;
     opacity: 0.8;
-    z-index: 99;
+    z-index: 100;
   }
 
   .menu-nav li {
@@ -53,16 +57,18 @@
 
   .hamburger {
     display: block;
-    z-index: 99;
+    z-index: 100;
   }
 
+  /*als menu gedrukt is klapt hij uit */
   .expanded {
     transform: translateX(0%);
   }
 
   /*TRANSITIONS***********/
+  /* Waneer gedrukt wordt op hamburger animeren deze gedefineerde lijnen */
   .top-animate {
-    transform: rotate(-45deg)translate(-17px, 6px);
+    transform: rotate(-45deg)translate(-1em, 0.40em);
   }
 
   .middle-animate {
@@ -70,9 +76,10 @@
   }
 
   .bottom-animate {
-    transform: rotate(45deg)translate(-5px, 6px);
+    transform: rotate(45deg)translate(-0.30em, 0.40em);
   }
 
+  /* Zodat mijn logo altijd door de hamburger nav heen gaat. */
   figure img {
     z-index: 1;
   }

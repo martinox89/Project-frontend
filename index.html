@@ -14,18 +14,19 @@
 <body>
   <header>
     <nav>
-      <figure class="logo">
+      <figure>
         <a href="https://downtherabbithole.nl/"><img src="https://downtherabbithole.nl/img/logo_white.png" alt="logo"></a>
 
       </figure>
 
       <ul class="menu-nav">
 
-        <li><a href="index.html">agenda</a></li>
-        <li><a href="artiest.html">artiesten</a></li>
+        <li><a class="current" href="index.html">Lineup</a></li>
+        <li><a href="artiesten.html">artiesten</a></li>
         <li><a href="#">info</a></li>
         <li><a href="#">Faq</a></li>
       </ul>
+
 
       <input type="text" placeholder="zoek hier verder" value="zoeken">
 
@@ -39,14 +40,13 @@
 
     </nav>
 
-    <video autoplay muted loop id="concert">
-      <source src="content/clipje.mp4">
-
+    <video autoplay muted loop>
+      <source src="content/concert.mp4">
     </video>
 
 
-    <h1>Marsmellow</h1>
-    <h3>Zaterdag 25 mei</h3>
+    <h1>Marco Borsato</h1>
+    <h3>3 and 4 December</h3>
   </header>
 
   <main>
@@ -57,24 +57,47 @@
           <legend>Filter op</legend>
           <ul>
             <li>
-              <input type="checkbox" name="populairste" value="populairste">
+              <input type="checkbox" id="populairste" name="populairste" value="populairste">
               <label for="populairste">populairste</label>
             </li>
 
             <li>
-              <input type="checkbox" name="nieuw" value="nieuw">
+              <input type="checkbox" id="nieuw" name="nieuw" value="nieuw">
               <label for="nieuw">Nieuw</label>
             </li>
             <li>
-              <input type="checkbox" name="locatie" value="locatie">
+              <input type="checkbox" id="locatie" name="locatie" value="locatie">
               <label for="locatie">locatie</label>
             </li>
 
             <li>
-              <input type="checkbox" name="prijs" value="prijs">
+              <input type="checkbox" id="prijs" name="prijs" value="prijs">
               <label for="prijs">Prijs</label>
             </li>
           </ul>
+
+          <ul>
+            <li>
+              <input type="checkbox" id="populairste" name="populairste" value="populairste">
+              <label for="populairste">populairste</label>
+            </li>
+
+            <li>
+              <input type="checkbox" id="nieuw" name="nieuw" value="nieuw">
+              <label for="nieuw">Nieuw</label>
+            </li>
+            <li>
+              <input type="checkbox" id="locatie" name="locatie" value="locatie">
+              <label for="locatie">locatie</label>
+            </li>
+
+            <li>
+              <input type="checkbox" id="prijs" name="prijs" value="prijs">
+              <label for="prijs">Prijs</label>
+            </li>
+          </ul>
+
+
           <input type="submit" name="uitvoeren" value="uitvoeren">
         </fieldset>
 
@@ -94,100 +117,141 @@
 
     <div class="wrapper">
       <section>
-        <h2>Aankomende Artiesten</h2>
+        <h2>Line up</h2>
+        <a href="detailpagina.h">
+          <article>
+            <header>
+              <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+            </header>
+            <footer>
+              <h3>Justin Bieber</h3>
+              <time>25 and 26 November</time>
+            </footer>
+          </article>
+        </a>
+
         <article>
           <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+            <img src="https://assets.televizier.nl/upload/b/t/borsato-932-20178.jpg" alt="Marco Borsato">
           </header>
           <footer>
-            <h3>Justin Bieber</h3>
-            <time>25 and 26 November</time>
+            <h3>Marco borsato</h3>
+            <time>3 and 4 December</time>
           </footer>
         </article>
 
         <article>
           <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+            <img src="content/davina.jpg" alt="Davina">
           </header>
           <footer>
-            <h3>Justin Bieber</h3>
-            <time>25 and 26 November</time>
+            <h3>Davina</h3>
+            <time>6 and 7 January</time>
           </footer>
         </article>
 
         <article>
           <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+            <img src="content/giel.jpg" alt="Giel de Winter">
           </header>
           <footer>
-            <h3>Justin Bieber</h3>
-            <time>25&26 November</time>
+            <h3>Giel Stuktv</h3>
+            <time>10 January</time>
           </footer>
         </article>
 
         <article>
           <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+            <img src="content/paulmc.jpg" alt="Paul MC">
           </header>
           <footer>
-            <h3>Justin Bieber</h3>
-            <time>25&26 November</time>
+            <h3>Paul MC</h3>
+            <time>15 January</time>
           </footer>
         </article>
+
+        <article>
+          <header>
+            <img src="content/jantje.jpg" alt="Jan Smit">
+          </header>
+          <footer>
+            <h3>Giel Stuktv</h3>
+            <time>10 January</time>
+          </footer>
+        </article>
+
       </section>
     </div>
 
     <button id="knop">Laad meer artiesten</button>
     <!--tweede container om meer content in te laden -->
-    <div class="wrapper">
-      <section id="hide">
-        <h2>Nog meer artiesten</h2>
-        <article>
-          <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-          </header>
-          <footer>
-            <h3>Justin Bieber</h3>
-            <time>25&26 November</time>
-          </footer>
-        </article>
+    <section class="hide">
+      <h2>Meer artiesten</h2>
+      <article>
+        <header>
+          <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
+        </header>
+        <footer>
+          <h3>Justin Bieber</h3>
+          <time>25 and 26 November</time>
+        </footer>
+      </article>
 
-        <article>
-          <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-          </header>
-          <footer>
-            <h3>Justin Bieber</h3>
-            <time>25&26 November</time>
-          </footer>
-        </article>
+      <article>
+        <header>
+          <img src="https://assets.televizier.nl/upload/b/t/borsato-932-20178.jpg" alt="Marco Borsato">
+        </header>
+        <footer>
+          <h3>Marco borsato</h3>
+          <time>3 and 4 December</time>
+        </footer>
+      </article>
 
-        <article>
-          <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-          </header>
-          <footer>
-            <h3>Justin Bieber</h3>
-            <time>25&26 November</time>
-          </footer>
-        </article>
+      <article>
+        <header>
+          <img src="content/davina.jpg" alt="Davina">
+        </header>
+        <footer>
+          <h3>Davina</h3>
+          <time>6 and 7 January</time>
+        </footer>
+      </article>
 
-        <article>
-          <header>
-            <img src="https://www.funx.nl/images/2019/09/03_47_ANP-52650323.jpg" alt="justin bieber">
-          </header>
-          <footer>
-            <h3>Justin Bieber</h3>
-            <time>25&26 November</time>
-          </footer>
-        </article>
-      </section>
-    </div>
+      <article>
+        <header>
+          <img src="content/giel.jpg" alt="Giel de Winter">
+        </header>
+        <footer>
+          <h3>Giel Stuktv</h3>
+          <time>10 January</time>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="content/paulmc.jpg" alt="Paul MC">
+        </header>
+        <footer>
+          <h3>Paul MC</h3>
+          <time>15 January</time>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="content/jantje.jpg" alt="Jan Smit">
+        </header>
+        <footer>
+          <h3>Giel Stuktv</h3>
+          <time>10 January</time>
+        </footer>
+      </article>
+
+    </section>
 
     <section class="event">
-      <h2>Video van het evenement</h2>
+      <h2>Aftermovie Down The Rabit</h2>
       <iframe src="https://www.youtube.com/embed/XNsfxvRWgdo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
     </section>
   </main>
 
@@ -195,10 +259,10 @@
   <footer>
     <ul>
       <li><a href="https://downtherabbithole.nl/"><img src="https://downtherabbithole.nl/img/logo_white.png" alt="logo"></a></li>
-      <li>Facebook</li>
-      <li>instragram</li>
-      <li>Martijnsleven.nl</li>
-      <li>Youtube</li>
+      <li><a href="https://downtherabbithole.nl/">Facebook</a></li>
+      <li><a href="https://downtherabbithole.nl/">instragram</a></li>
+      <li><a href="https://downtherabbithole.nl/">Martijnsleven.nl</a></li>
+      <li><a href="https://downtherabbithole.nl/">Youtube</a></li>
     </ul>
     <small>&copy; Copyright Martijn Smit 2019</small>
   </footer>

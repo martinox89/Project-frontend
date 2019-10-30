@@ -1,107 +1,112 @@
+/* Bronnen van hulp /*
+
+CSS Tricks. (2019, 27 oktober). A Complete Guide to Flexbox | CSS-Tricks.
+Geraadpleegd op 30 oktober 2019, van https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+CSS Tricks. (2019a, 13 september). A Complete Guide to Grid | CSS-Tricks.
+Geraadpleegd op 30 oktober 2019, van https://css-tricks.com/snippets/css/complete-guide-grid/
+
+CSS Tricks. (2019a, 20 februari). Media Queries for Standard Devices | CSS-Tricks.
+Geraadpleegd op 30 oktober 2019, van https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
 /*GLOBAL**************/
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #fff;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  outline: none;
 }
-
 
 body {
-    width: 100%;
-
-    font-family: "Helvetica";
-    background: url(http://img11.deviantart.net/39ef/i/2007/275/1/6/purple_cloud_texture_1_by_osorrisstock.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: 1s ease-in;
+  width: 100%;
+  font-family: "Helvetica";
+  background: url(http://img11.deviantart.net/39ef/i/2007/275/1/6/purple_cloud_texture_1_by_osorrisstock.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 1s ease-in;
 }
-
-
 
 a,
 li {
-    text-decoration: none;
-    font-weight: 600;
-    list-style: none;
+  text-decoration: none;
+  font-weight: 600;
+  list-style: none;
+  color: #fff;
+  transition: 1s;
 }
 
 h1 {
-    color: #fff;
-    font-size: 2rem;
+  color: #fff;
+  font-size: 2rem;
 }
 
+a:hover {
+  font-size: 2em;
+}
+
+a:focus {
+  letter-spacing: 0.5em;
+}
+
+.current {
+  text-decoration: underline;
+  font-size: 1.5em;
+}
 
 /*HEADER**************/
-
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    position: relative;
-    color: #000;
-    overflow: hidden;
-    height: 20em;
-    z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 20em;
+  z-index: 0;
+  background-color: #000;
 }
-
 
 video {
   width: 100%;
-  ;
+  opacity: 0.8;
 }
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
-    z-index: 99;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.logo {
-    margin: 2rem 0 0 0rem;
-    z-index: 1;
+figure {
+  margin: 2rem 0 0 0rem;
+  z-index: 101;
 }
 
 img {
-    width: 80%;
-    z-index: 1;
+  width: 80%;
+  z-index: 1;
 }
-
-nav a {
-    color: #fff;
-    transition: 1s;
-}
-
-nav:hover {
-  color: yellow;
-}
-
-nav a:focus {
-  text-decoration: underline;
-}
-
-
 
 .menu-nav {
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
 }
 
+/* Gebruik gemaakt van de attribute selector om specifiek
+   alleen de input met de type "text" te selecteren. */
 input[type="text"] {
-  display: inline-block;
-  color:#000;
+  display: flex;
+  color: #000;
   padding: 1em 0em 1em 4em;
   background-image: url(../content/zoeken.svg);
   background-size: 2em;
@@ -109,106 +114,118 @@ input[type="text"] {
   background-repeat: no-repeat;
   background-position: 1em;
   border-radius: 5em;
-  border:none;
+  border: none;
   width: 1em;
   transition: 1s;
   margin-left: 0em;
-
 }
 
+/*Hiermee gaat de zoekinput uitgeschroven worden */
 input[type="text"]:focus {
   width: 12em;
 }
 
-
+/*Alle eerste headers worden geselecteerd waar een h1 of h3 element in zitten */
 header:first-of-type h1 {
-    position: relative;
+  position: relative;
 }
 
 header:first-of-type h3 {
-    margin-bottom: 5em;
-    position: relative;
+  margin-bottom: 5em;
+  position: relative;
 }
 
 video {
-    width: 130%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
+  width: 130%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
+/* Aparte style voor artiesten overzicht pagina en het
+was net te klein om dat te op een losse css pagina te doen. */
+header.artiesten {
+  background-image: url(../content/down.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-
+header.artiesten h1 {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  font-size: 3em;
+}
 
 /* Main stuff */
-
 main {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 5em;
-    
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 5em;
+  margin-top: 2em;
 }
 
 aside {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: auto;
-
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
 }
 
 button {
-    display: flex;
-    color: #fff;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    background: url(../content/sorfilter.svg)no-repeat left;
-    background-size: 2em;
-    padding: 1rem 2rem 1rem 4rem;
-    border: none;
-    font-weight: 800;
-    width: 100%;
-    transition: 1s;
-    z-index: 99;
+  display: flex;
+  color: #fff;
+  font-size: 1.5em;
+  background: url(../content/sorfilter.svg)no-repeat left;
+  background-size: 2em;
+  padding: 1rem 2rem 1rem 4rem;
+  border: none;
+  font-weight: 800;
+  width: 100%;
+  transition: 1s;
+  cursor: pointer;
 }
 
 form {
-    display: none;
-    width: 95%;
-    margin: 0 auto;
-    height: auto;
-    z-index: 1;
-
-
+  display: none;
+  width: 95%;
+  margin: 0 auto;
+  height: auto;
 }
 
+/* Met de javascript classlist toggle wordt een class aangemaakt wat deze leuke
+uitschruif interactie maakt. */
 form.show {
-    display: flex;
-    flex-direction: column;
-
-    font-size: 1em;
-
-    z-index: 1;
-
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
 }
 
-form> fieldset {
-  margin-bottom: 2em;
+fieldset {
+  margin-top: 2em;
 }
 
 legend {
   text-align: center;
+  margin: 2em;
 }
 
-fieldset  ul > li {
+fieldset ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+fieldset ul>li {
   margin-left: 1em;
+  cursor: pointer;
 }
 
+/* Selector om Submit button te selecteren */
 form input[type="submit"] {
   margin-left: 1em;
   margin-top: 2em;
@@ -216,10 +233,9 @@ form input[type="submit"] {
   width: 10em;
   padding: 1em;
   background-color: #000;
-  border:none;
+  border: none;
+  cursor: pointer;
 }
-
-
 
 .tags a {
   display: flex;
@@ -229,107 +245,108 @@ form input[type="submit"] {
   margin-top: 1em;
   margin-bottom: 2em;
   width: 95%;
-
 }
-
-
-
-
-
-
 
 div.wrapper {
-    width: 90%;
-    margin: auto;
-    margin-top: 2em;
-
+  width: 90%;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 5em;
 }
 
-
-
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section h2 {
-    font-size: 2em;
-    position: relative;
-    z-index: 0;
+  font-size: 2em;
+  position: relative;
 }
 
 article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    transition: 2s;
-    height: auto;
-    box-shadow: 0.2em 0.2em 0.2em grey;
-    margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: 2s;
+  height: auto;
+  background-color: #000;
+  margin-top: 5em;
 }
 
 article header {
   height: auto;
-  z-index: 0;
 }
 
 article footer {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 2em;
-    background: none;
-    width: 100%;
-    position: absolute;
-    left:0;
-    bottom: 2em;
-    z-index: 99
-
-
+  padding: 2em;
+  background: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 2em;
 }
 
 article:hover {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
-
-
-
-
 
 article img {
-    display: flex;
-    width: 100%;
-    position: relative;
+  display: flex;
+  width: 100%;
+  position: relative;
+  opacity: 0.8;
 }
 
-div:last-of-type h2 {
-    display: none;
-
+/* Wou kijken hoe speciefiek ik kon gaan met de selectoren en dit kan
+  blijkbaar ook */
+img[src="content/paulmc.jpg"] {
+  width: 90%;
 }
 
-main > button {
-  background-color: red;
+img[src="content/jantje.jpg"] {
+  width: 90%;
+}
+
+main>button {
+  background-color: #000;
   background-image: none;
-    justify-content: space-around;
-    width: 20em;
-    margin: auto;
-    margin-top: 2em;
-    padding: 2em;
-    font-size: 1em;
+  justify-content: space-around;
+  width: 20em;
+  margin: auto;
+  margin-top: 2em;
+  padding: 2em;
+  font-size: 1em;
 }
 
-main > button:hover {
+main>button:hover {
   background-color: blue;
   transition: 1s;
 }
 
+main>button:focus {
+  transform: scale(1.04);
+  transition: 1s;
+}
 
+section.hide {
+  width: 90%;
+  margin: 2em auto;
+  display: none;
+}
 
+section.hide h2 {
+  display: none;
+}
 
+section.daarisdie {
+  display: flex;
+  transition: 1s;
+}
 
-main> section {
+main>section {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -342,251 +359,165 @@ section iframe {
   width: 100%;
   margin-top: 2em;
   height: 20em;
-
-
-
-
 }
 
-
 /* footer stuff */
-
-body> footer {
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-bottom: 2em;
-    padding-top: 2em;
+body>footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 2em;
+  padding-top: 2em;
 }
 
 footer li {
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  align-items: center;
 }
 
 li img {
   margin-left: 2em;
 }
 
+/* Onderdeel van mijn easter egg */
 .raar {
   transform: rotate(123deg);
-
 }
 
-
-
-/*artiest pagina layout */
-header.artiesten {
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-
-}
-
- .artiesten h1  {
-  margin-top:5em;
-  margin-left: 1em;
-
-}
-
-.container section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: -3em;
-}
-
-.container h3 {
-  display: none;
-}
-
-.container aside {
-  width: 100%;
-  margin-top: 2em;
-  padding: 2em;
-  border: solid white 0.1em;
-
-}
-
-article.info {
-  box-shadow: none;
-}
-
-
-
-article.info footer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding: 0;
-  left: 0;
-  bottom: 0;
-  padding-top: 2em;
-}
-
-.container article:hover {
-  transition: none;
-  transform: none;
-
-}
-
+/* Media queries Tablet van 48em */
 @media screen and (min-width:48em) {
-
-  a:hover {
-    color: yellow;
-  }
-
-.tags {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
-  margin: auto;
-
-}
-
-
-
-    section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-
-    article {
-
-      margin-right: 1em;
-    }
-
-
-    section h2 {
-        position: absolute;
-        top: 20;
-        left: 8em right:2em;
-    }
-
-    main> button {
-      margin-top: 2em;
-    }
-
-    section.event {
-      position: relative;
-    }
-
-    section.event h2 {
-      position: absolute;
-      left:0;
-    }
-
-
-
-
-
-    section iframe {
-      padding-top: 2em;
-      height: 30em;
-
-
-
-    }
-
-
-
-    /* artiesten tablet layout */
-
-    header.artiesten {
-      height: 20em;
-    }
-
-    header.artiesten h1 {
-      margin-top:5em;
-    }
-
-    .container section {
-      max-width: 70%;
-      margin: auto;
-
-}
-
-footer>ul {
-  display: flex;
-  flex-direction: row;
-}
-
-
-
-@media screen and (min-width:68em) {
   header {
-    height: 45em
-  }
-
-  section {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  header.artiesten {
     height: 30em;
-  }
-
-  header.artiesten h1 {
-    margin-top: 10em;
   }
 
   .tags {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    margin: auto;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
-
-
-
-
-
-  .container section {
-    max-width: 60%;
+  article {
+    margin-right: 1em;
   }
 
-  main> button {
-    margin-top: -10em;
+  section h2 {
+    position: absolute;
+    top: 20;
+    left: 8em right:2em;
   }
 
-  main > section {
-    margin-top: -12em;
+  main>button {
+    margin-top: 2em;
   }
 
-
-
-  section iframe {
-    height: 40em;
+  section.daarisdie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
-}
-
-@media screen and (min-width:90em) {
-  header {
-    height: 100vh
+  section.event {
+    position: relative;
   }
 
-  main > section {
-    margin-top: -15em;
-  }
-
-  main > button {
-    margin-top: -15em;
+  section.event h2 {
+    position: absolute;
+    left: 0;
   }
 
   section iframe {
-    height: 50em;
+    padding-top: 2em;
+    height: 30em;
   }
-}
+
+  footer>ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /*header layout Artiesten overzicht */
+  header.artiesten {
+    height: 30em;
+  }
+
+  /* Media querie voor laptops vanaf 68em */
+  @media screen and (min-width:68em) {
+
+    /*HEADER ****/
+    header h1 {
+      font-size: 3em;
+    }
+
+    header {
+      height: 100vh;
+    }
+
+    /* Andere style voor de artiesten overzicht */
+    header.artiesten {
+      height: 100vh;
+    }
+
+    /*Main ****/
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .tags {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    section.daarisdie {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    main>button {
+      margin-top: -15em;
+    }
+
+    section.event {
+      margin-top: 5em;
+    }
+
+    section iframe {
+      height: 40em;
+    }
+  }
+
+  /* Media querie voor grote schermen vanaf 90em */
+  @media screen and (min-width:90em) {
+    header {
+      height: 100vh;
+    }
+
+    main>section {
+      margin-top: 3em;
+    }
+
+    main>button {
+      margin-top: -15em;
+    }
+
+    section iframe {
+      height: 50em;
+    }
+  }

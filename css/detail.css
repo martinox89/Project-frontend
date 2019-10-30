@@ -1,0 +1,274 @@
+/* Net te veel layout aanpassingen dat ik een extra css hiervoor heb aangemaakt*/
+/* Bronnen van hulp /*
+
+CSS Tricks. (2019, 27 oktober). A Complete Guide to Flexbox | CSS-Tricks.
+Geraadpleegd op 30 oktober 2019, van https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+CSS Tricks. (2019a, 13 september). A Complete Guide to Grid | CSS-Tricks.
+Geraadpleegd op 30 oktober 2019, van https://css-tricks.com/snippets/css/complete-guide-grid/
+
+CSS Tricks. (2019a, 20 februari). Media Queries for Standard Devices | CSS-Tricks.
+Geraadpleegd op 30 oktober 2019, van https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+
+/* GLOBAL********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  font-family: "Helvetica";
+  background: url(http://img11.deviantart.net/39ef/i/2007/275/1/6/purple_cloud_texture_1_by_osorrisstock.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a,
+li {
+  text-decoration: none;
+  font-weight: 600;
+  list-style: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+/* TOP HEADER */
+body>header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  background-image: url(../content/JustinBieber2015.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 20em;
+  z-index: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+figure {
+  margin: 2rem 0 0 0rem;
+  z-index: 1;
+}
+
+img {
+  width: 80%;
+  z-index: 1;
+}
+
+a {
+  color: #fff;
+  transition: 1s;
+}
+
+nav a:hover {
+  font-size: 2em;
+}
+
+.current {
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+.menu-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+/* Gebruik gemaakt van de attribute selector om specifiek
+   alleen de input met de type "text" te selecteren. */
+input[type="text"] {
+  display: flex;
+  color: #000;
+  padding: 1em 0em 1em 4em;
+  background-image: url(../content/zoeken.svg);
+  background-size: 2em;
+  font-size: 1em;
+  background-repeat: no-repeat;
+  background-position: 1em;
+  border-radius: 5em;
+  border: none;
+  width: 1em;
+  transition: 1s;
+  margin-left: 0em;
+}
+
+input[type="text"]:focus {
+  width: 12em;
+}
+
+header h1 {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+}
+
+/*MAIN STUFF */
+main {
+  width: 100%;
+}
+
+/*Sections hebben niet altijd een heading nodig als al duidelijk is wat de titel is
+maar voor screenreaders is dit wel belangrijk*/
+main h2 {
+  display: none;
+}
+
+div.wrapper {
+  width: 80%;
+  margin: 2em auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+article header {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+header h3 {
+  margin-bottom: 1em;
+}
+
+article footer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 1em;
+}
+
+aside {
+  width: 100%;
+  margin-top: 2em;
+  padding: 2em;
+  border: solid white 0.1em;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+aside i {
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+iframe {
+  width: 80%;
+  margin: 2em auto;
+  height: 20em;
+}
+
+body>footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+footer li {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  align-items: center;
+}
+
+li img {
+  margin-left: 2em;
+}
+
+/* Voor Tablets vanaf 48em */
+@media screen and (min-width:48em) {
+  body>header {
+    height: 20em;
+  }
+
+  section {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  .wrapper aside {
+    max-width: 70%;
+    margin: 2em auto;
+  }
+
+  iframe {
+    height: 20em;
+  }
+
+  footer>ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Voor Laptops vanaf 68em */
+@media screen and (min-width:68em) {
+  body>header {
+    height: 100vh;
+  }
+
+  section {
+    max-width: 60%;
+  }
+
+  .wrapper aside {
+    max-width: 60%;
+  }
+
+  iframe {
+    height: 20em;
+  }
+}
+
+/*voor grote schermen vanaf 90em */
+@media screen and (min-width:90em) {
+  iframe {
+    height: 30em;
+  }
+}
