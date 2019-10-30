@@ -42,9 +42,10 @@ h1 {
   font-size: 2rem;
 }
 
-a:hover {
+ a:hover {
   font-size: 2em;
 }
+
 
 a:focus {
   letter-spacing: 0.5em;
@@ -252,6 +253,10 @@ div.wrapper {
   margin: auto;
   margin-top: 2em;
   margin-bottom: 5em;
+}
+
+.wrapper footer {
+  transform: scale(1.04);
 }
 
 section {
